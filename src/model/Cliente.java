@@ -1,12 +1,36 @@
 package model;
 
 public class Cliente {
+
+    private Long id;
     private String nome;
     private String email;
+    private String tipo;
+
+    public Cliente(Long id, String nome, String email, String tipo) {
+        this.id = id;
+        this.nome = nome;
+        this.email = email;
+        this.tipo = tipo;
+    }
+
+    public Cliente(String nome, String email, String tipo) {
+        this.nome = nome;
+        this.email = email;
+        this.tipo = tipo;
+    }
 
     public Cliente(String nome, String email) {
         this.nome = nome;
         this.email = email;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getNome() {
@@ -23,5 +47,13 @@ public class Cliente {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 }
